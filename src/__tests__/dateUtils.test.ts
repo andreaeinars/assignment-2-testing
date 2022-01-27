@@ -94,9 +94,9 @@ describe("Date Utils", () => {
     expect(result).toEqual(true);
   })
 
-  test('Date 25.05.2021 at 00:00:00:00 should not be same as 25.05.2021 at 00:00:00:01', () => {
+  test('Date 25.05.2021 should not be same as 26.05.2021', () => {
     const date_1 : Date = new Date(2021, 4, 25);
-    const date_2 : Date = new Date(2021, 4, 25, 0, 0, 0, 1);
+    const date_2 : Date = new Date(2021, 4, 26);
     var result : boolean = isSameDay(date_1, date_2);
     expect(result).toEqual(false);
   })
